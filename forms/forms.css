@@ -1,0 +1,196 @@
+.form-input-group {
+    margin: 15px;
+    position: relative;
+    --primary: #605DFF;
+}
+  
+.input {
+    all: unset;
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #9e9e9e;
+    border-radius: 10px;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.add-reoccurance {
+    text-align: center;
+}
+
+.input::placeholder {
+    color: transparent;
+}
+
+.input:focus::placeholder,
+.input:disabled::placeholder {
+    color: #8f8f8f;
+}
+
+.input:disabled {
+    background-color: #eeeeee;
+}
+  
+.label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #8f8f8f;
+    pointer-events: none;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+  
+.input:is(:focus, :disabled) {
+    border: 1px solid var(--primary);
+}
+  
+.input:is(:focus, :valid, :disabled) ~ label {
+    transform: translateY(-120%) scale(1);
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding-inline: 0.3rem;
+    color: var(--primary);
+}
+
+.input__wrapper svg {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    right: 24px;
+}
+
+.input__wrapper .input::-webkit-input-placeholder {
+    white-space: nowrap;
+}
+
+.input__wrapper {
+    /* padding: 0 16px; */
+    position: relative;
+}
+  
+.input__wrapper .input {
+    border-radius: 8px;
+    /* padding: 0 8px; */
+    padding-left: 35px;
+    flex-grow: 1;
+    width:280px !important;
+}
+
+.input__colour {
+    position: relative;
+}
+
+.input__colour .input {
+    padding-left: 55px;
+    flex-grow: 1;
+    width:260px !important;
+}
+
+.input__colour .colour_picker {
+    border-radius: 50%;
+    /* border: 1px solid black; */
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    right: 24px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.has-error {
+    --error-colour: #d40f0f;
+}
+
+.has-error .form-input-group {
+    margin-bottom: 0;
+}
+
+.has-error .input {
+    border: 1px solid var(--error-colour);
+    padding-right: 35px;
+    width: 280px !important;
+}
+
+.has-error .input__wrapper .input {
+    width: 260px !important;
+}
+
+.has-error .label {
+    color: var(--error-colour) !important;
+}
+
+.has-error .form-errors {
+    display: block;
+}
+
+.form-errors {
+    display: none;
+    color: var(--error-colour);
+    margin: 0 15px;
+    padding: 5px 15px ;
+    position: relative;
+}
+
+.form-error-icon {
+   display: none; 
+}
+
+.has-error .form-error-icon {
+    color: var(--error-colour);
+    display: inline;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    left: 300px;
+}
+
+#form-submit-popup {
+    position: fixed;
+    right: 100px;
+    z-index:99;
+    top: 80px;
+    display:block;
+    border-radius: 5px;
+}
+
+#form-submit-progress {
+    height: 7px;
+    border-radius: 5px;
+}
+
+#form-submit-text {
+    padding: 8px 15px 15px 15px;
+}
+
+.form-submit-success {
+    background-color:rgba(46, 150, 46, 0.95);
+    color:#ffffff;
+}
+.form-submit-progress-success {
+    background-color: rgb(39, 124, 39);
+}
+
+.form-submit-warn {
+    background-color: rgba(192, 190, 55, 0.95);
+    color:#000000;
+}
+.form-submit-progress-warn {
+    background-color: rgb(240, 236, 36);
+}
+
+.form-submit-error {
+    background-color: rgba(192, 59, 55, 0.95);
+    color:#ffffff;
+}
+.form-submit-progress-error {
+    background-color: rgb(241, 31, 24);
+}
