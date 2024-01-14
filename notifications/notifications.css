@@ -1,0 +1,20 @@
+#notification-bar {
+    right:0; 
+    height:100%; 
+    width:400px; 
+    position:fixed; 
+    display:none; 
+    /* background-color:#f9f9f9;  */
+    padding:15px;
+    z-index: 10000;
+}
+
+.notification-indicator {
+    display:inline;
+    border-radius:3px;
+    min-height: 15px;
+    max-height: 15px;
+    min-width: 15px;
+    max-width: 15px;
+    margin-right:10px;
+}

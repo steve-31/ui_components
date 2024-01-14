@@ -1,0 +1,41 @@
+#form-submit-popup {
+    position: fixed;
+    right: 100px;
+    z-index:99;
+    top: 80px;
+    display:block;
+    border-radius: 5px;
+}
+
+#form-submit-progress {
+    height: 7px;
+    border-radius: 5px;
+}
+
+#form-submit-text {
+    padding: 8px 15px 15px 15px;
+}
+
+.form-submit-success {
+    background-color:rgba(46, 150, 46, 0.95);
+    color: var(--white-colour);
+}
+.form-submit-progress-success {
+    background-color: rgb(39, 124, 39);
+}
+
+.form-submit-warn {
+    background-color: rgba(192, 190, 55, 0.95);
+    color: var(--black-colour);
+}
+.form-submit-progress-warn {
+    background-color: rgb(240, 236, 36);
+}
+
+.form-submit-error {
+    background-color: rgba(192, 59, 55, 0.95);
+    color: var(--white-colour);
+}
+.form-submit-progress-error {
+    background-color: rgb(241, 31, 24);
+}

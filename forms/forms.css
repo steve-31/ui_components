@@ -1,7 +1,6 @@
 .form-input-group {
     margin: 15px;
     position: relative;
-    --primary: #605DFF;
 }
   
 .input {
@@ -40,7 +39,7 @@
 }
   
 .input:is(:focus, :disabled) {
-    border: 1px solid var(--primary);
+    border: 1px solid var(--primary-colour);
 }
   
 .input:is(:focus, :valid, :disabled) ~ label {
@@ -48,7 +47,7 @@
     background-color: #ffffff;
     border-radius: 5px;
     padding-inline: 0.3rem;
-    color: var(--primary);
+    color: var(--primary-colour);
 }
 
 .input__wrapper svg {
@@ -103,10 +102,6 @@
     cursor: pointer;
 }
 
-.has-error {
-    --error-colour: #d40f0f;
-}
-
 .has-error .form-input-group {
     margin-bottom: 0;
 }
@@ -151,46 +146,4 @@
     transform: translateY(-50%);
     pointer-events: none;
     left: 300px;
-}
-
-#form-submit-popup {
-    position: fixed;
-    right: 100px;
-    z-index:99;
-    top: 80px;
-    display:block;
-    border-radius: 5px;
-}
-
-#form-submit-progress {
-    height: 7px;
-    border-radius: 5px;
-}
-
-#form-submit-text {
-    padding: 8px 15px 15px 15px;
-}
-
-.form-submit-success {
-    background-color:rgba(46, 150, 46, 0.95);
-    color:#ffffff;
-}
-.form-submit-progress-success {
-    background-color: rgb(39, 124, 39);
-}
-
-.form-submit-warn {
-    background-color: rgba(192, 190, 55, 0.95);
-    color:#000000;
-}
-.form-submit-progress-warn {
-    background-color: rgb(240, 236, 36);
-}
-
-.form-submit-error {
-    background-color: rgba(192, 59, 55, 0.95);
-    color:#ffffff;
-}
-.form-submit-progress-error {
-    background-color: rgb(241, 31, 24);
 }

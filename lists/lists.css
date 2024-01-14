@@ -1,0 +1,27 @@
+.list-group-item.active {
+    background-color: var(--item-active) !important;
+    color: var(--bs-list-group-color) !important;
+    border-color: var(--primary-colour) !important;
+    /* border-color: #858585 !important; */
+}
+
+.list-group-item.active::after {
+    background: var(--primary-colour);
+    border-radius: .375rem;
+    content: "";
+    height: 2rem;
+    left: calc( 0.5rem*-1);
+    position: absolute;
+    top: 4px;
+    width: 0.25rem;
+}
+
+.menu-image svg {
+    height:20px;
+    width:20px;
+    margin-right:10px;
+}
+
+.menu-image:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+<div id="notification-bar" data-get-url="{% url 'api:alert_get' %}" data-delete-url="{% url 'api:alert_delete' %}" data-update-url="{% url 'api:alert_create_update' %}">
+    {% if not alerts %}
+    <div class="no-alerts toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+        <div class="d-flex">
+            <div class="toast-body">
+                No alerts to display
+            </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+    {% else %}
+        <div class="toast-container position-static">
+        {% for a in alerts %}
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                <div class="toast-header">
+                    <div class="notification-indicator" style="background-color:{% if a.level == 'CRIT' %}red{% elif a.level == 'WARN' %}yellow{% else %}grey{% endif %};"></div>
+                    <strong class="me-auto" onclick="readAlert({{ a.id }});">{{ a.title }}</strong>
+                    <small class="text-body-secondary">{{ a.age }}</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" onclick="deleteAlert({{ a.id }});"></button>
+                </div>
+                <div class="toast-body" onclick="readAlert({{ a.id }});">
+                    {{ a.message|safe }}
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+</div>
+{% endif %}

@@ -1,0 +1,17 @@
+:root {
+    /* SET COLOUR SCHEME */
+    --scheme-primary-colour: #043F9F;
+    --scheme-secondary-colour: #FCDB0F;
+    --scheme-tertiary-colour: #8CB9AD;
+
+    /* COLOUR VARIABLES */
+    --base-colour: #FCFCFD;
+    --black-colour: #212529;
+    --white-colour: #f7f7f7;
+    --success-colour: #198754;
+    --success-colour-hover: #146c43;
+    --error-colour: #d40f0f;
+    --warn-colour: #f0ec24;
+
+    --item-active: #e9e7e7;
+}
